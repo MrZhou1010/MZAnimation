@@ -1,16 +1,20 @@
 PODS:
+  - EasyAnimation (2.2.1)
   - lottie-ios (3.1.8)
 
 DEPENDENCIES:
+  - EasyAnimation
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - EasyAnimation
     - lottie-ios
 
 SPEC CHECKSUMS:
+  EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
 
-PODFILE CHECKSUM: e80312f9f651150872eba8be2d12b3ac3063e7b2
+PODFILE CHECKSUM: d047063c096b0924f7ff9364376e9b806c123271
 
 COCOAPODS: 1.9.3

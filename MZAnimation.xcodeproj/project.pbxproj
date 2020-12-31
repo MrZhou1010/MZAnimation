@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		19EA98F87D4C37D81AD3A85E /* Pods_MZAnimation_MZAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61C1D79F73B7AC6A52654B0 /* Pods_MZAnimation_MZAnimationUITests.framework */; };
 		93575147C01B950319A3058C /* Pods_MZAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9961C97E371ADE724F84CC /* Pods_MZAnimationTests.framework */; };
+		B4C7172925514636002C1F46 /* lottie_like.json in Resources */ = {isa = PBXBuildFile; fileRef = B4C7172825514636002C1F46 /* lottie_like.json */; };
+		B4C7172F25515517002C1F46 /* MZEasyAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7172E25515517002C1F46 /* MZEasyAnimationVC.swift */; };
 		B4D9F18024A98F05006CAE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9F17F24A98F05006CAE72 /* AppDelegate.swift */; };
 		B4D9F18224A98F05006CAE72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9F18124A98F05006CAE72 /* SceneDelegate.swift */; };
 		B4D9F18424A98F05006CAE72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9F18324A98F05006CAE72 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		6EFE7499A910676569E95B7E /* Pods-MZAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimation.release.xcconfig"; path = "Target Support Files/Pods-MZAnimation/Pods-MZAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		7435D009648C8017005B1574 /* Pods-MZAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimation.debug.xcconfig"; path = "Target Support Files/Pods-MZAnimation/Pods-MZAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		988EC7782D00FB767B1DD85F /* Pods-MZAnimation-MZAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimation-MZAnimationUITests.release.xcconfig"; path = "Target Support Files/Pods-MZAnimation-MZAnimationUITests/Pods-MZAnimation-MZAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B4C7172825514636002C1F46 /* lottie_like.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lottie_like.json; sourceTree = "<group>"; };
+		B4C7172E25515517002C1F46 /* MZEasyAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZEasyAnimationVC.swift; sourceTree = "<group>"; };
 		B4D9F17C24A98F05006CAE72 /* MZAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MZAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D9F17F24A98F05006CAE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4D9F18124A98F05006CAE72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B4C7172D25514F9F002C1F46 /* EasyAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				B4C7172E25515517002C1F46 /* MZEasyAnimationVC.swift */,
+			);
+			path = EasyAnimation;
+			sourceTree = "<group>";
+		};
 		B4D9F17324A98F05006CAE72 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +155,7 @@
 		B4D9F17E24A98F05006CAE72 /* MZAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				B4C7172D25514F9F002C1F46 /* EasyAnimation */,
 				B4D9F1AF24A9BF96006CAE72 /* LottieAnimation */,
 				B4D9F17F24A98F05006CAE72 /* AppDelegate.swift */,
 				B4D9F18124A98F05006CAE72 /* SceneDelegate.swift */,
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				B4D9F1B324A9DB6F006CAE72 /* lottie_loading.json */,
+				B4C7172825514636002C1F46 /* lottie_like.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -303,6 +317,7 @@
 				B4D9F18924A98F0D006CAE72 /* Assets.xcassets in Resources */,
 				B4D9F18724A98F05006CAE72 /* Main.storyboard in Resources */,
 				B4D9F1B424A9DB6F006CAE72 /* lottie_loading.json in Resources */,
+				B4C7172925514636002C1F46 /* lottie_like.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C7172F25515517002C1F46 /* MZEasyAnimationVC.swift in Sources */,
 				B4D9F18424A98F05006CAE72 /* ViewController.swift in Sources */,
 				B4D9F18024A98F05006CAE72 /* AppDelegate.swift in Sources */,
 				B4D9F1B224A9C914006CAE72 /* MZLottieAnimationVC.swift in Sources */,
@@ -538,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -592,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "动画"
         self.view.backgroundColor = UIColor.white
-        self.dataSource = ["Lottie动画"]
+        self.dataSource = ["Lottie动画", "EasyAnimation动画"]
         self.tableView.frame = self.view.bounds
         self.tableView.tableFooterView = UIView.init()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")

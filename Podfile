@@ -6,6 +6,7 @@ target 'MZAnimation' do
   use_frameworks!
   
   pod 'lottie-ios'
+  pod 'EasyAnimation'
   
   # Pods for MZAnimation
   
