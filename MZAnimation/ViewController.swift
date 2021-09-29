@@ -24,10 +24,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.navigationItem.title = "动画"
         self.view.backgroundColor = UIColor.white
-        self.dataSource = ["Lottie动画", "EasyAnimation动画"]
+        self.dataSource = ["Lottie动画", "EasyAnimation动画", "Replicator动画"]
         self.tableView.frame = self.view.bounds
         self.tableView.tableFooterView = UIView.init()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
@@ -59,6 +58,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
             let vc = MZLottieAnimationVC.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 1 {
+            let vc = MZEasyAnimationVC.init()
+            self.navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 2 {
+            let vc = MZReplicatorAnimationVC.init()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

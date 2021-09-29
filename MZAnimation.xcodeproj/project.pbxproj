@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		19EA98F87D4C37D81AD3A85E /* Pods_MZAnimation_MZAnimationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E61C1D79F73B7AC6A52654B0 /* Pods_MZAnimation_MZAnimationUITests.framework */; };
+		2EAD4B12270409F100005A40 /* lottie_switch.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD4AD9270409F100005A40 /* lottie_switch.json */; };
+		2EAD4B13270409F100005A40 /* lottie_heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EAD4ADA270409F100005A40 /* lottie_heart.json */; };
+		2EAD4B4C27044DB400005A40 /* MZReplicatorAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD4B4B27044DB400005A40 /* MZReplicatorAnimationVC.swift */; };
+		2EAD4B4E27044DE100005A40 /* MZBallLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAD4B4D27044DE100005A40 /* MZBallLoadingView.swift */; };
 		93575147C01B950319A3058C /* Pods_MZAnimationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9961C97E371ADE724F84CC /* Pods_MZAnimationTests.framework */; };
 		B4C7172925514636002C1F46 /* lottie_like.json in Resources */ = {isa = PBXBuildFile; fileRef = B4C7172825514636002C1F46 /* lottie_like.json */; };
 		B4C7172F25515517002C1F46 /* MZEasyAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7172E25515517002C1F46 /* MZEasyAnimationVC.swift */; };
@@ -44,6 +48,10 @@
 /* Begin PBXFileReference section */
 		038D299CF616DA59D851FF6B /* Pods-MZAnimation-MZAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimation-MZAnimationUITests.debug.xcconfig"; path = "Target Support Files/Pods-MZAnimation-MZAnimationUITests/Pods-MZAnimation-MZAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		14E76ABFCA7DE78D69A1023C /* Pods_MZAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EAD4AD9270409F100005A40 /* lottie_switch.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_switch.json; sourceTree = "<group>"; };
+		2EAD4ADA270409F100005A40 /* lottie_heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_heart.json; sourceTree = "<group>"; };
+		2EAD4B4B27044DB400005A40 /* MZReplicatorAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZReplicatorAnimationVC.swift; sourceTree = "<group>"; };
+		2EAD4B4D27044DE100005A40 /* MZBallLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MZBallLoadingView.swift; sourceTree = "<group>"; };
 		2F9961C97E371ADE724F84CC /* Pods_MZAnimationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MZAnimationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		313FCB00D26E8C550451B313 /* Pods-MZAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimationTests.release.xcconfig"; path = "Target Support Files/Pods-MZAnimationTests/Pods-MZAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EFE7499A910676569E95B7E /* Pods-MZAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MZAnimation.release.xcconfig"; path = "Target Support Files/Pods-MZAnimation/Pods-MZAnimation.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +120,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2EAD4B4A27044D7C00005A40 /* ReplicatorAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2EAD4B4D27044DE100005A40 /* MZBallLoadingView.swift */,
+				2EAD4B4B27044DB400005A40 /* MZReplicatorAnimationVC.swift */,
+			);
+			path = ReplicatorAnimation;
+			sourceTree = "<group>";
+		};
 		5DA2E62EE1322B0D407680CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +172,7 @@
 		B4D9F17E24A98F05006CAE72 /* MZAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				2EAD4B4A27044D7C00005A40 /* ReplicatorAnimation */,
 				B4C7172D25514F9F002C1F46 /* EasyAnimation */,
 				B4D9F1AF24A9BF96006CAE72 /* LottieAnimation */,
 				B4D9F17F24A98F05006CAE72 /* AppDelegate.swift */,
@@ -198,6 +216,8 @@
 		B4D9F1B024A9C8B7006CAE72 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2EAD4ADA270409F100005A40 /* lottie_heart.json */,
+				2EAD4AD9270409F100005A40 /* lottie_switch.json */,
 				B4D9F1B324A9DB6F006CAE72 /* lottie_loading.json */,
 				B4C7172825514636002C1F46 /* lottie_like.json */,
 			);
@@ -215,7 +235,7 @@
 				B4D9F17824A98F05006CAE72 /* Sources */,
 				B4D9F17924A98F05006CAE72 /* Frameworks */,
 				B4D9F17A24A98F05006CAE72 /* Resources */,
-				611B18F429A78467842D962C /* [CP] Embed Pods Frameworks */,
+				EB8B9E50B1A8DA4BF213F9E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,7 +273,7 @@
 				B4D9F19924A98F0D006CAE72 /* Sources */,
 				B4D9F19A24A98F0D006CAE72 /* Frameworks */,
 				B4D9F19B24A98F0D006CAE72 /* Resources */,
-				1F73A5F4D943766B642182F1 /* [CP] Embed Pods Frameworks */,
+				287E70C723AD945E9DA716F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -316,8 +336,10 @@
 				B4D9F18C24A98F0D006CAE72 /* LaunchScreen.storyboard in Resources */,
 				B4D9F18924A98F0D006CAE72 /* Assets.xcassets in Resources */,
 				B4D9F18724A98F05006CAE72 /* Main.storyboard in Resources */,
+				2EAD4B12270409F100005A40 /* lottie_switch.json in Resources */,
 				B4D9F1B424A9DB6F006CAE72 /* lottie_loading.json in Resources */,
 				B4C7172925514636002C1F46 /* lottie_like.json in Resources */,
+				2EAD4B13270409F100005A40 /* lottie_heart.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +382,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F73A5F4D943766B642182F1 /* [CP] Embed Pods Frameworks */ = {
+		287E70C723AD945E9DA716F4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -375,23 +397,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MZAnimation-MZAnimationUITests/Pods-MZAnimation-MZAnimationUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		611B18F429A78467842D962C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		763915B1EDAAD37920C4F10D /* [CP] Check Pods Manifest.lock */ = {
@@ -438,6 +443,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB8B9E50B1A8DA4BF213F9E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MZAnimation/Pods-MZAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -448,6 +470,8 @@
 				B4C7172F25515517002C1F46 /* MZEasyAnimationVC.swift in Sources */,
 				B4D9F18424A98F05006CAE72 /* ViewController.swift in Sources */,
 				B4D9F18024A98F05006CAE72 /* AppDelegate.swift in Sources */,
+				2EAD4B4E27044DE100005A40 /* MZBallLoadingView.swift in Sources */,
+				2EAD4B4C27044DB400005A40 /* MZReplicatorAnimationVC.swift in Sources */,
 				B4D9F1B224A9C914006CAE72 /* MZLottieAnimationVC.swift in Sources */,
 				B4D9F18224A98F05006CAE72 /* SceneDelegate.swift in Sources */,
 			);

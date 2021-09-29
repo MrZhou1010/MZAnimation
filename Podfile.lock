@@ -1,6 +1,6 @@
 PODS:
   - EasyAnimation (2.2.1)
-  - lottie-ios (3.1.8)
+  - lottie-ios (3.2.3)
 
 DEPENDENCIES:
   - EasyAnimation
@@ -13,7 +13,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   EasyAnimation: 226d133d23ef0ef99ddfb8928ff2a9a4a77d1cfd
-  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
 
 PODFILE CHECKSUM: d047063c096b0924f7ff9364376e9b806c123271
 
