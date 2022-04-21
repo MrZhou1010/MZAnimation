@@ -18,7 +18,7 @@ class MZReplicatorAnimationVC: UIViewController {
     }
     
     private func setupUI() {
-        let scaleLoadingView = MZBallLoadingView.init(frame: CGRect(x: 60.0, y: 200.0, width: 80.0, height: 30.0))
+        let scaleLoadingView = MZBallLoadingView(frame: CGRect(x: 100.0, y: 200.0, width: 80.0, height: 30.0))
         scaleLoadingView.style = .scale
         scaleLoadingView.ballCount = 3
         scaleLoadingView.ballSize = CGSize(width: 20.0, height: 20.0)
@@ -27,12 +27,12 @@ class MZReplicatorAnimationVC: UIViewController {
         self.view.addSubview(scaleLoadingView)
         scaleLoadingView.startLoadingAnimation()
         
-        let opacityLoadingView = MZBallLoadingView.init(frame: CGRect(x: 60.0, y: 300.0, width: 80.0, height: 30.0))
+        let opacityLoadingView = MZBallLoadingView(frame: CGRect(x: 100.0, y: 300.0, width: 80.0, height: 30.0))
         opacityLoadingView.backgroundColor = UIColor.clear
         opacityLoadingView.style = .opacity
         opacityLoadingView.ballCount = 5
-        opacityLoadingView.ballSize = CGSize(width: 14.0, height: 14.0)
-        opacityLoadingView.ballSpace = 7.0
+        opacityLoadingView.ballSize = CGSize(width: 12.0, height: 12.0)
+        opacityLoadingView.ballSpace = 6.0
         opacityLoadingView.ballColor = UIColor.gray
         self.view.addSubview(opacityLoadingView)
         opacityLoadingView.startLoadingAnimation()

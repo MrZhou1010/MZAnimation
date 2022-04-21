@@ -75,19 +75,19 @@ class MZLottieAnimationVC: UIViewController {
         networkAnimationView.animationSpeed = 1.0
         // 进入后台默认暂停动画,pauseAndRestore表示暂停后重新开始动画
         networkAnimationView.backgroundBehavior = .pauseAndRestore
-        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(playAnimation(tap:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(playAnimation(tap:)))
         networkAnimationView.addGestureRecognizer(tapGesture)
         self.view.addSubview(networkAnimationView)
     }
     
     private func setupSwitch() {
-        let switchButton = AnimatedSwitch()
-        switchButton.animation = Animation.named("lottie_switch")
-        switchButton.frame = CGRect(x: 160.0, y: 400.0, width: 100.0, height: 60.0)
-        switchButton.setProgressForState(fromProgress: 0.5, toProgress: 1.0, forOnState: true)
-        switchButton.setProgressForState(fromProgress: 0, toProgress: 0.5, forOnState: false)
-        switchButton.addTarget(self, action: #selector(switchAction(switchButton:)), for: .valueChanged)
-        self.view.addSubview(switchButton)
+        let switchBtn = AnimatedSwitch()
+        switchBtn.animation = Animation.named("lottie_switch")
+        switchBtn.frame = CGRect(x: 160.0, y: 400.0, width: 100.0, height: 60.0)
+        switchBtn.setProgressForState(fromProgress: 0.5, toProgress: 1.0, forOnState: true)
+        switchBtn.setProgressForState(fromProgress: 0, toProgress: 0.5, forOnState: false)
+        switchBtn.addTarget(self, action: #selector(switchBtnAction(switchBtn:)), for: .valueChanged)
+        self.view.addSubview(switchBtn)
     }
     
     @objc private func playAnimation(tap: UITapGestureRecognizer) {
@@ -96,7 +96,7 @@ class MZLottieAnimationVC: UIViewController {
         }
     }
     
-    @objc private func switchAction(switchButton: AnimatedSwitch) {
+    @objc private func switchBtnAction(switchBtn: AnimatedSwitch) {
         
     }
 }

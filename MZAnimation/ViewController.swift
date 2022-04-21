@@ -10,10 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var dataSource = [Any]()
+    private var dataSource = [String]()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView.init(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = UIColor.clear
@@ -28,13 +28,14 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
         self.dataSource = ["Lottie动画", "EasyAnimation动画", "Replicator动画"]
         self.tableView.frame = self.view.bounds
-        self.tableView.tableFooterView = UIView.init()
+        self.tableView.tableFooterView = UIView()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         self.view.addSubview(self.tableView)
     }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -46,7 +47,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = self.dataSource[indexPath.row] as? String
+        cell.textLabel?.text = self.dataSource[indexPath.row]
         return cell
     }
     
@@ -57,13 +58,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            let vc = MZLottieAnimationVC.init()
+            let vc = MZLottieAnimationVC()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 1 {
-            let vc = MZEasyAnimationVC.init()
+            let vc = MZEasyAnimationVC()
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 2 {
-            let vc = MZReplicatorAnimationVC.init()
+            let vc = MZReplicatorAnimationVC()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

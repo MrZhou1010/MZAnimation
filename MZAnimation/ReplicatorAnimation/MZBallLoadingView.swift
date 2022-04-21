@@ -61,7 +61,7 @@ class MZBallLoadingView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
     }
     
     private func setupViews() {
@@ -70,7 +70,7 @@ class MZBallLoadingView: UIView {
         self.replicatorLayer.backgroundColor = UIColor.clear.cgColor
         self.replicatorLayer.frame = CGRect(x: 0, y: 0, width: width, height: min)
         self.replicatorLayer.instanceCount = self.ballCount
-        self.replicatorLayer.instanceDelay = 1.0 / Double(self.ballCount)
+        self.replicatorLayer.instanceDelay = 1.0 / CGFloat(self.ballCount)
         self.layer.addSublayer(self.replicatorLayer)
         
         self.ballLayer.backgroundColor = self.ballColor.cgColor
@@ -79,44 +79,46 @@ class MZBallLoadingView: UIView {
         self.ballLayer.masksToBounds = true
         self.replicatorLayer.addSublayer(self.ballLayer)
     }
-}
-
-extension MZBallLoadingView {
-    /// 开始动画
-    public func startLoadingAnimation() {
-        self.ballLayer.removeAllAnimations()
-        let ballAnimation = self.animation(self.style, beginTime: CACurrentMediaTime(), from: 1.0, to: 0.3)
-        self.ballLayer.add(ballAnimation, forKey: "ballAnimation")
-    }
-    
-    /// 结束动画
-    public func stopLoadingAnimation() {
-        self.ballLayer.removeAllAnimations()
-    }
-}
-
-extension MZBallLoadingView {
     
     private func updateFrame() {
         let min = min(self.ballSize.width, self.ballSize.height)
         let width = (min + self.ballSpace) * CGFloat(self.ballCount) - self.ballSpace
         self.replicatorLayer.frame = CGRect(x: 0, y: 0, width: width, height: min)
         self.replicatorLayer.instanceCount = self.ballCount
-        self.replicatorLayer.instanceDelay = 1.0 / Double(self.ballCount)
+        self.replicatorLayer.instanceDelay = 1.0 / CGFloat(self.ballCount)
         
         self.ballLayer.backgroundColor = self.ballColor.cgColor
         self.ballLayer.frame = CGRect(x: 0, y: 0, width: min, height: min)
         self.ballLayer.cornerRadius = min * 0.5
+        self.ballLayer.masksToBounds = true
+    }
+}
+
+extension MZBallLoadingView {
+    
+    /// 开始动画
+    public func startLoadingAnimation() {
+        self.ballLayer.removeAnimation(forKey: "ballAnimation")
+        let ballAnimation = self.animation(with: self.style, beginTime: CACurrentMediaTime(), from: 1.0, to: 0.3)
+        self.ballLayer.add(ballAnimation, forKey: "ballAnimation")
     }
     
-    private func animation(_ style: MZBallLoadingAnimationStyle = .opacity, beginTime: CFTimeInterval = CACurrentMediaTime(), from: CGFloat = 1.0, to: CGFloat = 0.0) -> CABasicAnimation {
+    /// 结束动画
+    public func stopLoadingAnimation() {
+        self.ballLayer.removeAnimation(forKey: "ballAnimation")
+    }
+}
+
+extension MZBallLoadingView {
+    
+    private func animation(with style: MZBallLoadingAnimationStyle = .opacity, beginTime: CFTimeInterval = CACurrentMediaTime(), from: CGFloat = 1.0, to: CGFloat = 0.0) -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: style.rawValue)
-        animation.repeatCount = MAXFLOAT
         animation.beginTime = beginTime
-        animation.duration = 1.0
         animation.fromValue = from
         animation.toValue = to
+        animation.duration = 1.0
         animation.autoreverses = true
+        animation.repeatCount = MAXFLOAT
         return animation
     }
 }
